@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Background Colors */
+    --color-background: #020617; /* slate-950 - Deep navy base */
+    --color-foreground: #F8FAFC; /* slate-50 - High-contrast white */
+    --color-card: #1E293B; /* slate-800 - Elevated surface color */
+    --color-card-foreground: #F8FAFC; /* slate-50 - High-contrast white */
+    --color-popover: #1E293B; /* slate-800 - Elevated surface color */
+    --color-popover-foreground: #F8FAFC; /* slate-50 - High-contrast white */
+    
+    /* Primary Colors */
+    --color-primary: #1E40AF; /* blue-800 - Deep aviation blue */
+    --color-primary-foreground: #F8FAFC; /* slate-50 - High-contrast white */
+    --color-secondary: #0F172A; /* slate-900 - Rich slate background */
+    --color-secondary-foreground: #F8FAFC; /* slate-50 - High-contrast white */
+    
+    /* Accent Colors */
+    --color-accent: #06B6D4; /* cyan-500 - Bright cyan */
+    --color-accent-foreground: #020617; /* slate-950 - Dark text for contrast */
+    
+    /* Muted Colors */
+    --color-muted: #334155; /* slate-700 - Muted background */
+    --color-muted-foreground: #94A3B8; /* slate-400 - Muted slate text */
+    
+    /* Border and Input */
+    --color-border: #475569; /* slate-600 - Border color */
+    --color-input: #1E293B; /* slate-800 - Input background */
+    --color-ring: #1E40AF; /* blue-800 - Focus ring */
+    
+    /* Status Colors */
+    --color-success: #10B981; /* emerald-500 - Aviation-standard green */
+    --color-success-foreground: #F8FAFC; /* slate-50 - High-contrast white */
+    --color-warning: #F59E0B; /* amber-500 - Amber warning */
+    --color-warning-foreground: #020617; /* slate-950 - Dark text for contrast */
+    --color-error: #EF4444; /* red-500 - Critical red */
+    --color-error-foreground: #F8FAFC; /* slate-50 - High-contrast white */
+    --color-destructive: #EF4444; /* red-500 - Critical red */
+    --color-destructive-foreground: #F8FAFC; /* slate-50 - High-contrast white */
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .aviation-shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  }
+  
+  .aviation-border {
+    @apply border border-slate-600;
+  }
+  
+  .data-font {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
